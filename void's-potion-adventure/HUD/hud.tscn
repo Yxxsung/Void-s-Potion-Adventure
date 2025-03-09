@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://cswthg6xtplj6"]
+
+[ext_resource type="Script" path="res://HUD/hud.gd" id="1_403vy"]
+[ext_resource type="Texture2D" uid="uid://rrjbqygcvfwx" path="res://Assets/hopethisworks2.png" id="2_5rqxf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fu1wi"]
+font_size = 200
+font_color = Color(0.652164, 0.000442418, 0.681165, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_403vy")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -550.0
+offset_top = -500.0
+offset_right = 596.0
+offset_bottom = -227.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+label_settings = SubResource("LabelSettings_fu1wi")
+
+[node name="P1" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_5rqxf")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="P2" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_5rqxf")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="P3" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_5rqxf")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="P4" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_5rqxf")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="P5" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_5rqxf")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Message" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
